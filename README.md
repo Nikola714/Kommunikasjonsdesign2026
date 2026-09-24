@@ -1,2 +1,2 @@
 # Kommunikasjonsdesign2026
-Nettsider for articler
+Nettsider for artikler

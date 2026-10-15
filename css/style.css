@@ -16,3 +16,7 @@ html, body{
     height: 852px;
 }
 
+#draw-area{
+    background-color: #ffff99;
+    width: 100%;
+}

@@ -4,9 +4,8 @@
 }
 
 div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  width: 500px;
+  height: 500px;
   position: relative;
 }
 
@@ -18,9 +17,9 @@ div.animate {
 
 
 @keyframes animate {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  0%   {background-color:red; background-image: url(../img/game_controller.png); left:0px; top:0px;}
+  25%  {background-color:yellow; background-image: url(../img/game_controller.png); left:200px; top:200px;}
+  50%  {background-color:blue; background-image: url(../img/game_controller.png); left:400px; top:400px;}
+  75%  {background-color:green; background-image: url(../img/game_controller.png); left:600px; top:600px;}
+  100%  {background-color:green; background-image: url(../img/game_controller.png); left:800px; top:800px;}  
 }

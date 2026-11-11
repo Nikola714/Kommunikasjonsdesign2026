@@ -1,3 +1,14 @@
+body{
+  font-size: 25px;
+  margin: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+h1{
+  text-align: center;
+}
+
+
 .img{
     width:300px;
     height: 300px;
@@ -5,7 +16,7 @@
 
 div {
   width: 300px;
-  height: 900px;
+  height: 600px;
   position: relative;
 }
 
@@ -17,21 +28,30 @@ div.animate {
 
 
 @keyframes animate {
-  0%   {background-color:red; background-image: url(../img/game_controller.png); background-size: contain ; left:0px; top:0px;}
-  25%  {background-color:yellow; background-image: url(../img/game_controller.png); background-size: contain  ; left:0px; top:200px;}
-  50%  {background-color:blue; background-image: url(../img/game_controller.png); background-size: contain  ; left:00px; top:400px;}
-  75%  {background-color:green; background-image: url(../img/game_controller.png); background-size: contain ; left:0px; top:600px;}
-  100%  {background-color:green; background-image: url(../img/game_controller.png); background-size: contain  ; left:0px; top:800px;}  
+  0%   { background-image: url(../img/game_controller.png); background-size: contain ; background-repeat: no-repeat; left:0px; top:0px;}
+  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:700px;}  
 }
 
-
+/* DESKTOP */
 @media (min-width: 900px) {
 
-@keyframes animate {
-  0%   {background-color:red; background-image: url(../img/game_controller.png); left:0px; top:0px;}
-  25%  {background-color:yellow; background-image: url(../img/game_controller.png); left:200px; top:200px;}
-  50%  {background-color:blue; background-image: url(../img/game_controller.png); left:400px; top:400px;}
-  75%  {background-color:green; background-image: url(../img/game_controller.png); left:600px; top:600px;}
-  100%  {background-color:green; background-image: url(../img/game_controller.png); left:800px; top:800px;}  
+  div {
+  width: 500px;
+  height: 500px;
+  position: relative;
 }
+
+  div.animate {
+    animation-name: animate;
+    animation-duration: 4s;
+  }
+
+  @keyframes animate {
+    0%   {background-image: url(../img/game_controller.png); background-size: contain ; left:0px; top:0px;}
+    100%  {background-image: url(../img/game_controller.png); background-size: contain ; left:800px; top:800px;}  
+  }
+
+  .lan-section{
+    margin-top: 10rem;
+  }
 }

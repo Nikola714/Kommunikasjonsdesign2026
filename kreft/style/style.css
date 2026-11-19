@@ -5,6 +5,12 @@ body{
 h1{
   text-align: center;
   margin: 1rem;
+  padding: 2rem;
+}
+
+.linje{
+  background-color: #095363;
+  height: 20px;
 }
 
 .kreft-animasjon {

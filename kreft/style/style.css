@@ -1,19 +1,37 @@
 body{
   font-size: 25px;
-  margin: 2rem;
+  margin: 0;
 }
 h1{
   text-align: center;
+  margin: 1rem;
 }
 
 .kreft-animasjon {
+  display: block;
   width: 300px;
   height: 500px;
   object-fit: contain;
+  padding: 2rem;
+  margin: 0;
+}
+
+.kreft-animasjon_figur {
+  position: relative;
+  margin: 0;
+}
+
+.kreft-animasjon_top_vindu {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .kreft-animasjon_top {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 300px;
   height: 200px;
   object-fit: contain;
@@ -26,6 +44,59 @@ h1{
 
 
 @keyframes walk {
-  0%   { left:-100%; top:0px;}
-  100%  { left: 100%; top:0px}  
+  0%   { left: -300px; }
+  100% { left: 100%; }
+}
+
+p{
+  background-color: #095363;
+  color: #fff;
+  padding: 2rem;
+  margin: 0;
+  line-height: 1.5;
+
+}
+
+.undertekst_for_figurer{
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 1.5rem;
+    line-height: 1.5;
+
+}
+
+
+#cancerDie{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    width: 400px;
+    position: relative;
+    animation-name: cancerDies;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 0s; /* bestemme når animasjon starter */
+}
+
+@keyframes cancerDies{
+    0%{
+        background-image: url('../img/cancer_die.png');
+        bottom: 120px;
+        transform: scale(0.2) rotate(-180deg);
+    }
+
+    100%{
+        bottom: 5px;
+        transform: scale(0.8);
+        background-image: url('../img/cancer_die.png');
+      
+    }
 }

@@ -2,6 +2,13 @@ body{
   font-size: 25px;
   margin: 0;
 }
+
+/* endre farger når du merker tekst */
+::selection{
+  background-color: #000;
+  color: #fff;
+}
+
 h1{
   text-align: center;
   margin: 1rem;
@@ -77,6 +84,12 @@ p{
     line-height: 1.5;
 
 }
+
+a{
+  color: #095363;
+}
+
+
 
 
 .cancerDie{

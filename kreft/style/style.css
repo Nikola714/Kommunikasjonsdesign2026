@@ -79,7 +79,7 @@ p{
 }
 
 
-#cancerDie{
+.cancerDie{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -105,4 +105,21 @@ p{
         background-image: url('../img/cancer_die.png');
       
     }
+}
+
+
+/* DESKTOP */
+@media (min-width: 900px) { 
+
+  .kreft-animasjon{
+    margin: 2rem auto;
+  }
+
+  .undertekst_for_figurer{
+    text-align: center;
+  }
+
+  .cancerDie{
+    margin: 2rem auto;
+  }
 }

@@ -20,3 +20,33 @@ html, body{
     background-color: #ffff99;
     width: 100%;
 }
+
+.bie-animasjon_top_vindu {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bie-animasjon_top {
+  position: absolute;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
+  animation-name: bieOnTo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes bieOnTo {
+  0%   { left: -100px; top: 0px}
+  25% {top: 60px}
+  50% {top: 0px}
+  75% {top: 40px}
+  100% { left: 100%; top: 0px}
+}

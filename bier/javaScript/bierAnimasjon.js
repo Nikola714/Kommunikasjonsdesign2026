@@ -1,11 +1,14 @@
 // Hver animasjon kobler sammen visningsvinduet, bildefilen og bildeframene.
 const animasjoner = [
-  {
+  //første animasjon - bie på toppen
+    {
     vindu: document.querySelector(".bie-animasjon_top_vindu"),
     bilde: document.querySelector(".bie-animasjon_top"),
     bilder: ["./img/img1.png", "./img/img2.png"],
     bildeIndeks: 0,
   },
+
+  //andre animasjon - bie over andre avsnitt
   {
     vindu: document.querySelector(".bie-animasjon_andre_vindu"),
     bilde: document.querySelector(".bie-animasjon_andre"),

@@ -1,56 +1,59 @@
-//Animasjon på toppen
-//lager en liste med bilder
-const bieBilder_top = [
-  "./img/img1.png",
-  "./img/img2.png",
+// Hver animasjon kobler sammen visningsvinduet, bildefilen og bildeframene.
+const animasjoner = [
+  {
+    vindu: document.querySelector(".bie-animasjon_top_vindu"),
+    bilde: document.querySelector(".bie-animasjon_top"),
+    bilder: ["./img/img1.png", "./img/img2.png"],
+    bildeIndeks: 0,
+  },
+  {
+    vindu: document.querySelector(".bie-animasjon_andre_vindu"),
+    bilde: document.querySelector(".bie-animasjon_andre"),
+    bilder: ["./img/img3.png", "./img/img4.png"],
+    bildeIndeks: 0,
+  },
 ];
 
-//koble animasjon til HTML-element med class="bie-animasjon_top"
-const animasjonsBilde_top = document.querySelector(".bie-animasjon_top");
+// Denne artikkelen avgjør når bieanimasjonen skal byttes.
+const nesteArtikkel = document.querySelector("#andre");
 
-//bestemme hvilken bilde kommer først ved å skrive indeks bieBilder liste
-let nesteBilde_top = 0; //denne index har img1
+// -1 sørger for at første kall til visAnimasjon oppdaterer klassene.
+let aktivAnimasjon = -1;
 
+// Bytt bare klasser når den aktive animasjonen faktisk endres.
+function visAnimasjon(indeks) {
+  if (aktivAnimasjon === indeks) {
+    return;
+  }
+
+  aktivAnimasjon = indeks;
+
+  // CSS viser den aktive biegruppen og pauser den andre.
+  animasjoner.forEach((animasjon, animasjonsIndeks) => {
+    const erAktiv = animasjonsIndeks === aktivAnimasjon;
+    animasjon.vindu.classList.toggle("is-active", erAktiv);
+    animasjon.vindu.classList.toggle("is-paused", !erAktiv);
+  });
+}
+
+function oppdaterAnimasjonVedScroll() {
+  // Bytt animasjon når toppen av artikkel 2 når toppen av skjermen.
+  const nesteArtikkelErNådd = nesteArtikkel.getBoundingClientRect().top <= 0;
+  visAnimasjon(nesteArtikkelErNådd ? 1 : 0);
+}
+
+// Oppdater bildeframen til den aktive biegruppen og start på nytt ved siste bilde.
 setInterval(() => {
-  setTimeout(() => {
-    animasjonsBilde_top.src = bieBilder_top[nesteBilde_top];
+  const animasjon = animasjoner[aktivAnimasjon];
+  animasjon.bildeIndeks = (animasjon.bildeIndeks + 1) % animasjon.bilder.length;
+  animasjon.bilde.src = animasjon.bilder[animasjon.bildeIndeks];
+}, 250);
 
-    
-    nesteBilde_top = (nesteBilde_top + 1) % bieBilder_top.length;
-  }, 100); //forteller koden at den skal kjøre etter 50 millisekunder
-}, 250); //sier hvor fort bildene skal endret seg
+// Oppdater valg ved scrolling, og tillat scrolling uten å blokkere brukergrensesnittet.
+window.addEventListener("scroll", oppdaterAnimasjonVedScroll, { passive: true });
 
+// Beregn riktig animasjon på nytt hvis vindusstørrelsen endres.
+window.addEventListener("resize", oppdaterAnimasjonVedScroll);
 
-
-
-
-
-const div = document.querySelector("div");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        div.classList.add("animate");
-    }
-});
-
-//Andre animasjon
-//lager en liste med bilder
-const bieBilder_andre = [
-  "./img/img3.png",
-  "./img/img4.png",
-];
-
-//koble animasjon til HTML-element med class="bie-animasjon_to"
-const animasjonsBilde_andre = document.querySelector(".bie-animasjon_andre");
-
-//bestemme hvilken bilde kommer først ved å skrive indeks bieBilder liste
-let nesteBilde_andre = 0; //denne index har img1
-
-setInterval(() => {
-  setTimeout(() => {
-    animasjonsBilde_andre.src = bieBilder_andre[nesteBilde_andre];
-
-    
-    nesteBilde_andre = (nesteBilde_andre + 1) % bieBilder_andre.length;
-  }, 100); //forteller koden at den skal kjøre etter 50 millisekunder
-}, 250); //sier hvor fort bildene skal endret seg
+// Velg riktig animasjon med en gang siden lastes, også ved direkte lenke til artikkel 2.
+oppdaterAnimasjonVedScroll();

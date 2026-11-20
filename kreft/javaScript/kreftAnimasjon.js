@@ -8,7 +8,7 @@ const kreftBilder_top = [
   "./img/image7_animation_top_mobile.png",
 ];
 
-//koble animasjon til HTML-element med class="kreft-animasjon"
+//koble animasjon til HTML-element med class="kreft-animasjon_top"
 const animasjonsBilde_top = document.querySelector(".kreft-animasjon_top");
 
 //bestemme hvilken bilde kommer først ved å skrive indeks kreftBilder liste

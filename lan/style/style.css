@@ -59,6 +59,41 @@ div.animate {
   margin: 2rem;
 }
 
+#linje_gompa{
+    background-color: #4f4f4f;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    opacity: 1px;
+  }
+
+  #gompa{
+    /*background-image: url('../sprites/sopp.png'); */
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    animation-name: runningGompa, movingGompa;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 0.5s, 5s;
+    animation-direction: normal, alternate;
+
+}
+
+
+
+@keyframes movingGompa{
+    from {right:0px;}
+    to{right: 240px;}
+}
+
+@keyframes runningGompa {
+    from{background-image: url('../img/sopp-kopi.png');}
+    to{background-image: url('../img/sopp.png');}
+}
+
 
 
 
@@ -116,6 +151,19 @@ div.animate {
     margin: auto;
   }
 
+  #linje_gompa{
+    width: 1450px;
+  }
 
+
+@keyframes runningGompa {
+    from{background-image: url('../img/sopp-kopi.png');}
+    to{background-image: url('../img/sopp.png');}
+}
+
+@keyframes movingGompa{
+    from {right:0px;}
+    to{right:1360px;}
+}
 
 }

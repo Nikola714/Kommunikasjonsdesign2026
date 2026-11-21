@@ -16,18 +16,40 @@ h1{
     padding: 1rem;
     height: 200px;
     margin: 2rem auto;
+    margin-bottom: 10rem;
 }
 
 #andre{
     padding: 1rem;
     height: 2500px;
-    margin: 0;
-    top: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 #andre p{
-    margin-top: 4rem;
     color: #fff;
+    padding: 2rem;
+}
+
+#bland{
+  width: 200px;
+  height: 100px;
+}
+
+#bie-og-bland{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#bie-gjemmer-seg-bland{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bie-gjemmer-seg{
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -100,6 +122,55 @@ h1{
   50% {top: 0px}
   75% {top: 60px}
   100% { left: -100px; top: 0px}
+}
+
+.bie-animasjon_tredje_vindu {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.bie-animasjon_tredje_vindu.is-active {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 200px;
+  visibility: visible;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bie-animasjon_tredje {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
+  left: -100px;
+  top: 0px;
+  animation-name: bieThirdAnimation;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.bie-animasjon_tredje_vindu.is-active .bie-animasjon_tredje {
+  animation-play-state: running;
+}
+
+@keyframes bieThirdAnimation {
+  0% { left: -100px; top: 20px; }
+  100% { left: calc(100% - 100px); top: 80px; }
+}
+
+
+#tredje p {
+  position: relative;
+  z-index: 2;
 }
 
 p{

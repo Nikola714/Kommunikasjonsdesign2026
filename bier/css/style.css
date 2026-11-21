@@ -1,9 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../img/beeBackground.png);
     background-size: cover;
     background-repeat: no-repeat;
+    font-size: 22px;
 }
 
 h1{
@@ -12,11 +12,13 @@ h1{
     margin: 2rem auto;
 }
 
+p{
+  line-height: 1.5;
+}
+
 #første{
     padding: 1rem;
-    height: 200px;
-    margin: 2rem auto;
-    margin-bottom: 10rem;
+    background-color: #fbe848;
 }
 
 
@@ -58,14 +60,15 @@ h1{
 
 #andre{
     padding: 1rem;
-    height: 2500px;
+    height: 700px;
     display: flex;
     flex-direction: column;
+    background-color: #4463ae;
 }
 
 #andre p{
+  margin-top: 5rem;
     color: #fff;
-    padding: 2rem;
 }
 
 #bland{
@@ -91,6 +94,29 @@ h1{
 
 
 
-p{
-  line-height: 1.5;
+.tredje{
+  padding: 1rem;
+  height: 350px;
+  background-color: #9dd8e0;
+}
+
+.fjerde{
+    padding: 1rem;
+    background-color: #ee7d29;
+    height: 400px;
+}
+
+.femte{
+    padding: 1rem;
+    background-color: #fbe848;
+}
+
+#blomster-for-bie{
+  background-color: #fbe848;
+  margin: 0;
+  padding: 0;
+}
+
+#blomster{
+  width: 400px;
 }

@@ -101,6 +101,46 @@ p{
   background-color: #9dd8e0;
 }
 
+
+.bie-animasjon_andre_vindu {
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  overflow: hidden;
+}
+
+.bie-animasjon_andre {
+  position: absolute;
+  margin-top: 0;
+  top: 20px;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
+  animation-name: andreAniamsjon;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes andreAniamsjon {
+  0%   { left: -100px; top: 0px}
+  25% {top: 60px}
+  50% {top: 0px}
+  75% {top: 40px}
+  100% { left: 100%; top: 0px}
+}
+
+#fjerde-avsnitt{
+  padding-top: 8rem;
+}
+
+
+
+
+
+
 .fjerde{
     padding: 1rem;
     background-color: #ee7d29;
@@ -112,6 +152,40 @@ p{
     background-color: #fbe848;
       height: 350px;
 
+}
+
+
+
+.bie-animasjon_siste_vindu {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.bie-animasjon_siste {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
+  animation-name: sisteAniamsjon;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes sisteAniamsjon {
+  0%   { left: -100px; top: 0px}
+  25% {top: 60px}
+  50% { left: 40%; top: 100px}
+  75% { left: 40%; top: 100px}
+  100% { left: 40%; top: 100px}
 }
 
 #blomster-for-bie{

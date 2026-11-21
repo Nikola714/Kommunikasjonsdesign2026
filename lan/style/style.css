@@ -108,21 +108,14 @@ div.animate {
   #img_turnering{
     width: 400px;
     height: 400px;
+    margin: auto;
   }
 
   .undertekst{
     width: 440px;
+    margin: auto;
   }
 
-  #nedDellen{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
 
-  #nedDellen .tekst{
-    width: 500px;
-}
 
 }

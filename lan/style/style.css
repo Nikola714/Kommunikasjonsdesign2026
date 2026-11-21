@@ -23,13 +23,14 @@ div {
 div.animate {
   animation-name: animate;
   animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 
 
 @keyframes animate {
   0%   { background-image: url(../img/game_controller.png); background-size: contain ; background-repeat: no-repeat; left:0px; top:0px;}
-  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:700px;}  
+  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:300px;}  
 }
 
 /* DESKTOP */
@@ -44,12 +45,14 @@ div.animate {
   div.animate {
     animation-name: animate;
     animation-duration: 4s;
+    animation-fill-mode: forwards;
+
   }
 
-  @keyframes animate {
-    0%   {background-image: url(../img/game_controller.png); background-size: contain ; left:0px; top:0px;}
-    100%  {background-image: url(../img/game_controller.png); background-size: contain ; left:800px; top:800px;}  
-  }
+@keyframes animate {
+  0%   { background-image: url(../img/game_controller.png); background-size: contain ; background-repeat: no-repeat; left:0px; top:0px; margin: 1rem auto;}
+  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:550px; margin: 1rem auto;}  
+}
 
   .lan-section{
     margin-top: 10rem;

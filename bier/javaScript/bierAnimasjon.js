@@ -20,15 +20,3 @@ setInterval(() => {
   }, 100); //forteller koden at den skal kjøre etter 50 millisekunder
 }, 250); //sier hvor fort bildene skal endret seg
 
-
-
-
-
-
-const div = document.querySelector("div");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        div.classList.add("animate");
-    }
-});

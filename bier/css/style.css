@@ -64,6 +64,7 @@ p{
     display: flex;
     flex-direction: column;
     background-color: #4463ae;
+    background-image: url(../img/rain.png);
 }
 
 #andre p{
@@ -109,6 +110,8 @@ p{
 .femte{
     padding: 1rem;
     background-color: #fbe848;
+      height: 350px;
+
 }
 
 #blomster-for-bie{

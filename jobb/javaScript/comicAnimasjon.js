@@ -13,15 +13,27 @@ function myFunction() {
         "Får bachelor, er fornøyd og er klar for jobb",
         "Men ingen jobb er klar for dem"
     ];
+    const sider = [
+        "1",
+        "2",
+        "3",
+        "4"
+    ];
+    
 
     const animasjonsBilde = document.querySelector(".comic-animasjon");
-    const undertekst = document.querySelector(".undertekst_for_comic");
+    const undertekst = document.querySelector(".comic-tekst");    
+    const comicSide = document.querySelector(".comic-side");
+    console.log(comicSide);
     const comicContainer = document.querySelector(".comic-animasjon_figur");
 
     let nesteBilde = 0;
     let venter = false;
+    comicSide.textContent = sider[nesteBilde];
+    console.log("Nytt sidetall:", sider[nesteBilde]);
 
     comicContainer.addEventListener("wheel", (event) => {
+        console.log("Scroll registrert:", event.deltaY);
 
         // Hindre at hele nettsiden scroller
         event.preventDefault();
@@ -32,9 +44,11 @@ function myFunction() {
         if (event.deltaY > 0 && nesteBilde < comicBilder.length - 1) {
 
             nesteBilde++;
+            console.log("Neste bilde:", nesteBilde);
 
             animasjonsBilde.src = comicBilder[nesteBilde];
             undertekst.textContent = comicTekster[nesteBilde];
+            comicSide.textContent = sider[nesteBilde];
 
         }
 
@@ -45,6 +59,7 @@ function myFunction() {
 
             animasjonsBilde.src = comicBilder[nesteBilde];
             undertekst.textContent = comicTekster[nesteBilde];
+            comicSide.textContent = sider[nesteBilde]
 
         } else {
             return;

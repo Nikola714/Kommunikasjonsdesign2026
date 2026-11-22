@@ -19,6 +19,7 @@ h1{
 .img{
     width:280px;
     height: 280px;
+    margin: auto;
 }
 
 #turnering{
@@ -29,6 +30,16 @@ h1{
   #img_turnering{
     width:280px;
     height: 280px;
+    margin: 1rem auto;
+
+  }
+
+  .undertekst{
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    width: 280px;
+    margin: 1rem auto;
+
   }
 
 div {
@@ -47,17 +58,20 @@ div.animate {
 
 @keyframes animate {
   0%   { background-image: url(../img/game_controller.png); background-size: contain ; background-repeat: no-repeat; left:0px; top:0px;}
-  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:400px;}  
+  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:300px;}  
 }
 
 
 .tekst{
   margin: 2rem;
+  line-height: 1.5;
 }
 
 #bottom{
   margin: 2rem;
+  line-height: 1.5;
 }
+
 
 #linje_gompa{
     background-color: #4f4f4f;
@@ -94,12 +108,27 @@ div.animate {
     to{background-image: url('../img/sopp.png');}
 }
 
+#bottom a{
+  color: #fff;
+}
+
 
 
 
 
 /* DESKTOP */
-@media (min-width: 900px) {
+
+@media (min-width: 700px) {
+
+  .tekst{
+    margin: 2rem auto;
+    width: 600px;
+  }
+
+    .undertekst{
+      width: 100%;
+
+  }
 
   div {
   width: 500px;
@@ -116,19 +145,14 @@ div.animate {
 
 @keyframes animate {
   0%   { background-image: url(../img/game_controller.png); background-size: contain ; background-repeat: no-repeat; left:0px; top:0px; margin: 1rem auto;}
-  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:130px; margin: 1rem auto;}  
+  100%  { background-image: url(../img/game_controller.png); background-size: contain  ; background-repeat: no-repeat; left:0px; top:80px; margin: 1rem auto;}  
 }
 
   .lan-section{
     margin-top: 10rem;
   }
 
-  #figurer{
-    width: 900px;
-    margin: auto;
-    justify-content: space-between;
-    padding: 4rem;
-  }
+
 
   .img{
     width: 400px;
@@ -143,27 +167,56 @@ div.animate {
   #img_turnering{
     width: 400px;
     height: 400px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .undertekst{
-    width: 440px;
-    margin: auto;
+    width: 400px;
+    margin: 1rem auto;
+  }
+
+  #to-bilder-tekst{
+    width: 400px;
   }
 
   #linje_gompa{
-    width: 1450px;
+    width: 900px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin: 1rem auto;
   }
 
 
-@keyframes runningGompa {
-    from{background-image: url('../img/sopp-kopi.png');}
-    to{background-image: url('../img/sopp.png');}
+  @keyframes runningGompa {
+      from{background-image: url('../img/sopp-kopi.png');}
+      to{background-image: url('../img/sopp.png');}
+  }
+
+  @keyframes movingGompa{
+      from {right:130px;}
+      to{right:800px;}
+  }
+
+
+  #bottom{
+    margin: 3rem auto;
+    width: 600px;
+  }
 }
 
-@keyframes movingGompa{
-    from {right:0px;}
-    to{right:1360px;}
-}
 
+@media (min-width: 900px) {
+    #to-bilder-tekst{
+    width: 900px;
+  }
+
+  .tekst{
+    width: 900px;
+  }
+
+  #bottom{
+    margin-top: 10rem;
+    width: 900px;
+
+  }
 }

@@ -47,8 +47,8 @@ setInterval(() => {
 
 // Siste animasjon
 const bieBilder_siste = [
-  "./img/img1.png",
-  "./img/img2.png",
+  "./img/img3.png",
+  "./img/img4.png",
 ];
 
 // Koble animasjonen til HTML-elementet
@@ -73,7 +73,7 @@ function ventPåSlutt_siste() {
 
   setTimeout(() => {
     byttBilde_siste = false;
-    animasjonsBilde_siste.src = "./img/img2.png";
+    animasjonsBilde_siste.src = "./img/img4.png";
   }, 2500);
 }
 

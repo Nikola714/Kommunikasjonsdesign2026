@@ -150,7 +150,13 @@ p{
 .femte{
     padding: 1rem;
     background-color: #fbe848;
-      height: 350px;
+    height: 400px;
+
+}
+
+#sjette{
+    background-color: #fbe848;
+        padding: 1rem;
 
 }
 
@@ -169,8 +175,8 @@ p{
   position: absolute;
   margin: 0;
   padding: 0;
-  top: 20px;
-  left: 0;
+  top: 0;
+  right: 0;
   width: 100px;
   height: 200px;
   object-fit: contain;
@@ -181,11 +187,11 @@ p{
 }
 
 @keyframes sisteAniamsjon {
-  0%   { left: -100px; top: 0px}
+  0%   { right: -100px; top: 0px}
   25% {top: 60px}
-  50% { left: 40%; top: 100px}
-  75% { left: 40%; top: 100px}
-  100% { left: 40%; top: 100px}
+  50% { right: 35%; top: 125px}
+  75% { right: 35%; top: 125px}
+  100% { right: 35%; top: 125px}
 }
 
 #blomster-for-bie{

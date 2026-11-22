@@ -49,5 +49,5 @@ setInterval(() => {
 
     
     nesteBilde = (nesteBilde + 1) % kreftBilder.length;
-  }, 100); //forteller koden at den skal kjøre etter 50 millisekunder
+  }, 100); //forteller koden at den skal kjøre etter 100 millisekunder
 }, 250); //sier hvor fort bildene skal endret seg

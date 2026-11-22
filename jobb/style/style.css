@@ -20,6 +20,8 @@ h1{
 
     p{
         color: #fff;
+        width: 250px;
+        margin: 0 auto;
     }
 
     figure{
@@ -39,8 +41,10 @@ h1{
 
 .undertekst_for_comic {
     text-align: center;
-    padding: 0.5rem;
-    color: #fff;
+    padding: 0.3rem;
+    margin-top: 2rem;
+    color: #000;
+    background-color: #fff;
 }
 
 

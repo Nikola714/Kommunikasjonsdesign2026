@@ -1,0 +1,96 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #126066;
+    font-size: 24px;
+}
+
+h1{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+}
+
+.comic-animasjon_figur {
+    width: 100%;
+
+    p{
+        color: #fff;
+    }
+
+    figure{
+        border-color: #fff;
+        border-width: 10px;
+        border-style: dotted;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+
+.comic-animasjon {
+    width: 100%;
+    display: block;
+}
+
+.undertekst_for_comic {
+    text-align: center;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+
+#info{
+    color: #fff;
+    margin: 1rem;
+}
+
+
+
+#bottom {
+    color: #fff;
+    margin: 1rem;
+}
+
+#bottom a {
+    color: #fff;
+    overflow-wrap: anywhere;
+}
+
+#litteraturlista {
+    padding-left: 1.5rem;
+}
+
+#litteraturlista li {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+
+    h1{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .comic-animasjon_figur{
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #info{
+        margin: 3rem;
+
+    }
+
+    #bottom {
+        margin: 3rem;
+    }
+    
+}

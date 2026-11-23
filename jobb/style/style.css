@@ -14,15 +14,15 @@ h1{
     color: #fff;
     margin: 1rem auto;
     padding: 1rem;
-    width: 300px;
+    width: 70%;
 }
 
 .comic-animasjon_figur {
-    width: 100%;
+    width: 70%;
+    margin: 0rem auto;
 
     p{
         color: #fff;
-        width: 250px;
         margin: 0 auto;
         text-align: center;
     }
@@ -81,12 +81,13 @@ h1{
 
 #info{
     color: #fff;
-    margin: 1rem;
+    margin: 1rem auto;
+    width: 70%;
 }
 
 p{
     line-height: 1.5;
-
+    
 }
 
 
@@ -112,22 +113,20 @@ p{
     box-sizing: border-box;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
 
     h1{
-        width: 100%;
+        width: 90%;
         justify-content: center;
     }
 
     .comic-animasjon_figur{
-        width: 500px;
+        width: 50%;
         margin: 0 auto;
-    }
-
-    #info{
-        margin: 3rem;
 
     }
+
+
 
     #bottom {
         margin: 3rem;

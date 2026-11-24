@@ -73,7 +73,7 @@ div.animate {
 }
 
 
-#linje_gompa{
+.linje_gompa{
     background-color: #4f4f4f;
     width: 300px;
     height: 50px;
@@ -82,7 +82,7 @@ div.animate {
     opacity: 1px;
   }
 
-  #gompa{
+  .gompa{
     /*background-image: url('../sprites/sopp.png'); */
     background-size: contain;
     height: 50px;
@@ -179,7 +179,7 @@ div.animate {
     width: 400px;
   }
 
-  #linje_gompa{
+  .linje_gompa{
     width: 900px;
     margin-top: 1rem;
     margin-bottom: 1rem;
